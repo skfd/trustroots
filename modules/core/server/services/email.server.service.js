@@ -15,7 +15,7 @@ var _ = require('lodash'),
     agenda = require(path.resolve('./config/lib/agenda')),
     config = require(path.resolve('./config/config')),
     log = require(path.resolve('./config/lib/logger')),
-    url = (config.https ? 'https' : 'http') + '://' + config.domain;
+    url = 'https://trustroots.org';
 
 /**
  * Get a randomized name from a list of support volunteer names.
@@ -471,7 +471,7 @@ exports.addEmailBaseTemplateParams = function (params) {
     return {};
   }
 
-  var baseUrl = (config.https ? 'https' : 'http') + '://' + config.domain;
+  var baseUrl = url;
 
   params.urlSupportPlainText = baseUrl + '/support';
   params.footerUrlPlainText = baseUrl;
